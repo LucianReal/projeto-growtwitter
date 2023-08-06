@@ -1,4 +1,6 @@
 import { v4 as uuid } from "uuid";
+import { Tweet } from "./Tweet";
+import tweets from "../database/tweets";
 
 export class User {
     private id: string;
@@ -17,7 +19,18 @@ export class User {
         this.password = password;
     }
 
-    public getUsername(): string {
-        return this.username;
+    public getInf() {
+        return {
+            id: this.id,
+            name: this.name,
+            email: this.email,
+            username: this.username,
+            password: this.password
+          };      
+    }
+
+    public toTweet(tweet: Tweet): void {
+        tweet.setUserId(this.getInf().id);
+        tweets.push(tweet);
     }
 }

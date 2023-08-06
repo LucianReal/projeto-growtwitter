@@ -4,23 +4,17 @@ import validateFieldsUser from "../middlewares/validateFieldsUser";
 import validateUsernameUser from "../middlewares/validateUsernameUser";
 
 class UserController {
-    public createUser(data: any): User | boolean{
+    public registerUser(user: User): void {
 
-        const validatedFields = validateFieldsUser(data);
-        const validatedUsername = validateUsernameUser(data);
+        const validatedFields = validateFieldsUser(user);
+        const validatedUsername = validateUsernameUser(user);
 
         if(validatedUsername && validatedFields) {
-            const newUser = new User(data.name, data.email, data.username, data.password);
-            users.push(newUser);
-            return newUser;
+            users.push(user);
         } else if (!validatedUsername) {
-            console.log("Nome de usuário já existe.");
-            return false;
+            console.log("Usuário já existente.")
         } else if (!validatedFields) {
-            console.log("Preencha todos os campos para o cadastro.");
-            return false;
-        } else {
-            return false;
+            console.log("Preencha todos os campos.")
         }
     };
 

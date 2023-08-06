@@ -3,30 +3,21 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const User_1 = require("../models/User");
 const users_1 = __importDefault(require("../database/users"));
 const validateFieldsUser_1 = __importDefault(require("../middlewares/validateFieldsUser"));
 const validateUsernameUser_1 = __importDefault(require("../middlewares/validateUsernameUser"));
 class UserController {
-    createUser(data) {
-        const validatedFields = (0, validateFieldsUser_1.default)(data);
-        const validatedUsername = (0, validateUsernameUser_1.default)(data);
+    registerUser(user) {
+        const validatedFields = (0, validateFieldsUser_1.default)(user);
+        const validatedUsername = (0, validateUsernameUser_1.default)(user);
         if (validatedUsername && validatedFields) {
-            const newUser = new User_1.User(data.name, data.email, data.username, data.password);
-            users_1.default.push(newUser);
-            return newUser;
+            users_1.default.push(user);
         }
         else if (!validatedUsername) {
-            console.log("Nome de usuário já existe.");
-            return false;
+            console.log("Usuário já existente.");
         }
         else if (!validatedFields) {
-            console.log("Preencha todos os campos para o cadastro.");
-            return false;
-        }
-        else {
-            console.log("Dados inválidos.");
-            return false;
+            console.log("Preencha todos os campos.");
         }
     }
     ;
