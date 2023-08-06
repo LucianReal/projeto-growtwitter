@@ -6,8 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tweets_1 = __importDefault(require("../database/tweets"));
 class TweetController {
     registerTweet(user, tweet) {
-        //const getUserId = users.find(item => item.getId() === id);
-        user.toTweet(tweet);
+        user.sendTweet(tweet);
     }
     ;
     list() {

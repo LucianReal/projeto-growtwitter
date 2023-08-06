@@ -4,14 +4,12 @@ import tweets from "../database/tweets";
 
 class TweetController {
     public registerTweet(user: User, tweet: Tweet) {
-        user.toTweet(tweet);
+        user.sendTweet(tweet);
     };
 
     public list() {
         console.log(tweets);
     };
 };
-
-
 
 export default new TweetController;

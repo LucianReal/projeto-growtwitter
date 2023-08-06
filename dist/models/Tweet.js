@@ -22,5 +22,17 @@ class Tweet {
     setUserId(id) {
         this.userId = id;
     }
+    reply(content) {
+    }
+    ;
+    like() {
+    }
+    ;
+    show() {
+    }
+    ;
+    showReplies() {
+    }
+    ;
 }
 exports.Tweet = Tweet;

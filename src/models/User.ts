@@ -4,18 +4,18 @@ import tweets from "../database/tweets";
 
 export class User {
     private id: string;
-    private followers: [];
+    private following: string[];
     private name: string;
-    private email: string;
     private username: string;
+    private email: string;
     private password: string;
 
-    constructor(name: string, email: string, username: string, password: any) {
+    constructor(name: string, username: string, email: string, password: any) {
         this.id = uuid();
-        this.followers = [];
+        this.following = [];
         this.name = name;
-        this.email = email;
         this.username = username;
+        this.email = email;
         this.password = password;
     }
 
@@ -26,11 +26,27 @@ export class User {
             email: this.email,
             username: this.username,
             password: this.password
-          };      
+        };
     }
 
-    public toTweet(tweet: Tweet): void {
+    public sendTweet(tweet: Tweet): void {
         tweet.setUserId(this.getInf().id);
         tweets.push(tweet);
     }
+
+    public follow(user: User) {
+        this.following.push(user.username);
+    };
+
+    public showFollowing() {
+        return this.following;
+    };
+
+    public showFeed() {
+
+    };
+
+    public showTweets() {
+
+    };
 }

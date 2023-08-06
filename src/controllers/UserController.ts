@@ -9,7 +9,7 @@ class UserController {
         const validatedFields = validateFieldsUser(user);
         const validatedUsername = validateUsernameUser(user);
 
-        if(validatedUsername && validatedFields) {
+        if (validatedUsername && validatedFields) {
             users.push(user);
         } else if (!validatedUsername) {
             console.log("Usuário já existente.")

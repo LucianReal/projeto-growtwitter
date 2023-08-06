@@ -7,12 +7,12 @@ exports.User = void 0;
 const uuid_1 = require("uuid");
 const tweets_1 = __importDefault(require("../database/tweets"));
 class User {
-    constructor(name, email, username, password) {
+    constructor(name, username, email, password) {
         this.id = (0, uuid_1.v4)();
-        this.followers = [];
+        this.following = [];
         this.name = name;
-        this.email = email;
         this.username = username;
+        this.email = email;
         this.password = password;
     }
     getInf() {
@@ -24,9 +24,23 @@ class User {
             password: this.password
         };
     }
-    toTweet(tweet) {
+    sendTweet(tweet) {
         tweet.setUserId(this.getInf().id);
         tweets_1.default.push(tweet);
     }
+    follow(user) {
+        this.following.push(user.username);
+    }
+    ;
+    showFollowing() {
+        return this.following;
+    }
+    ;
+    showFeed() {
+    }
+    ;
+    showTweets() {
+    }
+    ;
 }
 exports.User = User;

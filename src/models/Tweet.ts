@@ -17,16 +17,31 @@ export class Tweet {
 
     public getDetails() {
         return {
-          id: this.id,
-          userId: this.userId,
-          likes: this.likes,
-          content: this.content,
-          type: this.type
+            id: this.id,
+            userId: this.userId,
+            likes: this.likes,
+            content: this.content,
+            type: this.type
         };
-      }
+    }
 
     public setUserId(id: string): void {
         this.userId = id;
     }
-    
+
+    public reply(content: string) {
+
+    };
+
+    public like() {
+
+    };
+
+    public show() {
+
+    };
+
+    public showReplies() {
+
+    };
 }
