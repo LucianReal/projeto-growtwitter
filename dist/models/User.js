@@ -26,7 +26,7 @@ class User {
         };
     }
     sendTweet(tweet) {
-        tweet.setUserId(this.getInf().id);
+        tweet.setUsername(this.getInf().id);
         tweets_1.default.push(tweet);
     }
     follow(user) {

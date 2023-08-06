@@ -1,18 +1,18 @@
 import { v4 as uuid } from "uuid";
-import { Like } from "./Like";
-import { User } from "./User";
 
 export class Tweet {
     private id: string;
-    private userId: string;
+    private username: string;
     private likes: string[];
+    private replies: string[];
     private content: string;
     private type: "normal" | "reply"
 
     constructor(content: string, type: any) {
         this.id = uuid();
-        this.userId = "";
+        this.username = "";
         this.likes = [];
+        this.replies = [];
         this.content = content;
         this.type = type;
     }
@@ -20,19 +20,20 @@ export class Tweet {
     public getInf() {
         return {
             id: this.id,
-            userId: this.userId,
+            username: this.username,
             likes: this.likes,
+            replies: this.replies,
             content: this.content,
             type: this.type
         };
     }
 
-    public setUserId(id: string): void {
-        this.userId = id;
+    public setUsername(username: string): void {
+        this.username = username;
     }
 
     public reply(content: string) {
-
+        
     };
 
     public like(username: string) {
@@ -44,6 +45,6 @@ export class Tweet {
     };
 
     public showReplies() {
-
+        return this.replies;
     };
 }

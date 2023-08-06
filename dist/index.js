@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const FollowController_1 = __importDefault(require("./controllers/FollowController"));
 const LikeController_1 = __importDefault(require("./controllers/LikeController"));
+const ReplyController_1 = __importDefault(require("./controllers/ReplyController"));
 const TweetController_1 = __importDefault(require("./controllers/TweetController"));
 const UserController_1 = __importDefault(require("./controllers/UserController"));
 const Like_1 = require("./models/Like");
@@ -29,7 +30,9 @@ const like1 = new Like_1.Like(user1, tweet2);
 const like2 = new Like_1.Like(user3, tweet2);
 //const like3 = new Like(user1, tweet2);
 LikeController_1.default.registerLike(like1);
+//Registro de replies
+const tweet4 = new Tweet_1.Tweet("Resposta a outro tweet", "reply");
+ReplyController_1.default.registerReply(user1, tweet4, tweet1);
 UserController_1.default.listUsers();
 TweetController_1.default.listTweets();
 FollowController_1.default.listFollowing(user1);
-LikeController_1.default.listLikes(like1);

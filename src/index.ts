@@ -1,5 +1,6 @@
 import FollowController from "./controllers/FollowController";
 import LikeController from "./controllers/LikeController";
+import ReplyController from "./controllers/ReplyController";
 import TweetController from "./controllers/TweetController";
 import UserController from "./controllers/UserController";
 import { Like } from "./models/Like";
@@ -32,6 +33,11 @@ const like2 = new Like(user3, tweet2);
 //const like3 = new Like(user1, tweet2);
 
 LikeController.registerLike(like1);
+
+//Registro de replies
+const tweet4 = new Tweet("Resposta a outro tweet", "reply")
+
+ReplyController.registerReply(user1, tweet4, tweet1);
 
 UserController.listUsers();
 TweetController.listTweets();

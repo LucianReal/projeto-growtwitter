@@ -5,22 +5,24 @@ const uuid_1 = require("uuid");
 class Tweet {
     constructor(content, type) {
         this.id = (0, uuid_1.v4)();
-        this.userId = "";
+        this.username = "";
         this.likes = [];
+        this.replies = [];
         this.content = content;
         this.type = type;
     }
     getInf() {
         return {
             id: this.id,
-            userId: this.userId,
+            username: this.username,
             likes: this.likes,
+            replies: this.replies,
             content: this.content,
             type: this.type
         };
     }
-    setUserId(id) {
-        this.userId = id;
+    setUsername(username) {
+        this.username = username;
     }
     reply(content) {
     }
@@ -33,6 +35,7 @@ class Tweet {
     }
     ;
     showReplies() {
+        return this.replies;
     }
     ;
 }
