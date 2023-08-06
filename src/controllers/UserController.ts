@@ -18,9 +18,9 @@ class UserController {
         }
     };
 
-    public list() {
+    public listUsers() {
         console.log(users);
     };
 };
 
-export default new UserController;
+export default new UserController();

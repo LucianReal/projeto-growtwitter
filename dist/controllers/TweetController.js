@@ -9,10 +9,10 @@ class TweetController {
         user.sendTweet(tweet);
     }
     ;
-    list() {
+    listTweets() {
         console.log(tweets_1.default);
     }
     ;
 }
 ;
-exports.default = new TweetController;
+exports.default = new TweetController();

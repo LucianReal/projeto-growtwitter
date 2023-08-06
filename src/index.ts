@@ -1,6 +1,8 @@
 import FollowController from "./controllers/FollowController";
+import LikeController from "./controllers/LikeController";
 import TweetController from "./controllers/TweetController";
 import UserController from "./controllers/UserController";
+import { Like } from "./models/Like";
 import { Tweet } from "./models/Tweet";
 import { User } from "./models/User";
 
@@ -23,6 +25,14 @@ TweetController.registerTweet(user2, tweet2);
 FollowController.registerFollow(user1, user2);
 FollowController.registerFollow(user1, user3);
 
-UserController.list();
-TweetController.list();
-FollowController.list(user1);
+// Registro de likes
+
+const like1 = new Like(user1, tweet2);
+const like2 = new Like(user3, tweet2);
+//const like3 = new Like(user1, tweet2);
+
+LikeController.registerLike(like1);
+
+UserController.listUsers();
+TweetController.listTweets();
+FollowController.listFollowing(user1);

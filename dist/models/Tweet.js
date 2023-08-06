@@ -6,11 +6,11 @@ class Tweet {
     constructor(content, type) {
         this.id = (0, uuid_1.v4)();
         this.userId = "";
-        this.likes = 0;
+        this.likes = [];
         this.content = content;
         this.type = type;
     }
-    getDetails() {
+    getInf() {
         return {
             id: this.id,
             userId: this.userId,
@@ -25,7 +25,8 @@ class Tweet {
     reply(content) {
     }
     ;
-    like() {
+    like(username) {
+        this.likes.push(username);
     }
     ;
     show() {

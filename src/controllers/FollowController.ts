@@ -13,9 +13,13 @@ class FollowController {
         }
     };
 
-    public list(user: User) {
+    public listFollowing(user: User) {
+        if (user.getInf().following.length === 0) {
+            console.log("Você não segue nenhum usuário.")
+            return;
+        }
         console.log("Você está seguindo estes usuários: " + user.showFollowing());
     };
 };
 
-export default new FollowController;
+export default new FollowController();

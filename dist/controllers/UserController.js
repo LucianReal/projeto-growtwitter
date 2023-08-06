@@ -21,10 +21,10 @@ class UserController {
         }
     }
     ;
-    list() {
+    listUsers() {
         console.log(users_1.default);
     }
     ;
 }
 ;
-exports.default = new UserController;
+exports.default = new UserController();

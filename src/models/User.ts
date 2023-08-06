@@ -22,6 +22,7 @@ export class User {
     public getInf() {
         return {
             id: this.id,
+            following: this.following,
             name: this.name,
             email: this.email,
             username: this.username,

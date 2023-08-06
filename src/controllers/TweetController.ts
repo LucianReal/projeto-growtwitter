@@ -7,9 +7,9 @@ class TweetController {
         user.sendTweet(tweet);
     };
 
-    public list() {
+    public listTweets() {
         console.log(tweets);
     };
 };
 
-export default new TweetController;
+export default new TweetController();
