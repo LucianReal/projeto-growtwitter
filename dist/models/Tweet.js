@@ -24,7 +24,8 @@ class Tweet {
     setUsername(username) {
         this.username = username;
     }
-    reply(content) {
+    reply(reply) {
+        this.replies.push(reply);
     }
     ;
     like(username) {

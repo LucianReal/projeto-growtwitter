@@ -31,7 +31,7 @@ export class User {
     }
 
     public sendTweet(tweet: Tweet): void {
-        tweet.setUsername(this.getInf().id);
+        tweet.setUsername(this.getInf().username);
         tweets.push(tweet);
     }
 

@@ -4,7 +4,7 @@ export class Tweet {
     private id: string;
     private username: string;
     private likes: string[];
-    private replies: string[];
+    private replies: Tweet[];
     private content: string;
     private type: "normal" | "reply"
 
@@ -32,8 +32,8 @@ export class Tweet {
         this.username = username;
     }
 
-    public reply(content: string) {
-        
+    public reply(reply: Tweet) {
+        this.replies.push(reply);
     };
 
     public like(username: string) {

@@ -37,8 +37,8 @@ LikeController.registerLike(like1);
 //Registro de replies
 const tweet4 = new Tweet("Resposta a outro tweet", "reply")
 
-ReplyController.registerReply(user1, tweet4, tweet1);
+ReplyController.registerReply(user1, tweet4, tweet2);
 
 UserController.listUsers();
-TweetController.listTweets();
+TweetController.listTweet(tweet2);
 FollowController.listFollowing(user1);

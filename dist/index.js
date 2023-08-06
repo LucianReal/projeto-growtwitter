@@ -32,7 +32,7 @@ const like2 = new Like_1.Like(user3, tweet2);
 LikeController_1.default.registerLike(like1);
 //Registro de replies
 const tweet4 = new Tweet_1.Tweet("Resposta a outro tweet", "reply");
-ReplyController_1.default.registerReply(user1, tweet4, tweet1);
+ReplyController_1.default.registerReply(user1, tweet4, tweet2);
 UserController_1.default.listUsers();
-TweetController_1.default.listTweets();
+TweetController_1.default.listTweet(tweet2);
 FollowController_1.default.listFollowing(user1);
