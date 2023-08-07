@@ -2,7 +2,7 @@
 
 Este projeto consiste em uma aplicação desenvolvida em Node.js com o uso de TypeScript e Programação Orientada a Objetos, na qual simula comandos básicos da rede social Twitter, sendo possível registrar usuários e tweets, assim como seguir outros usuários, curtir outros tweets e também vizualizar o feed de tweets. 
 
-Este trabalho foi desenvolvido para a conclusão do módulo Back-end II do Programa Starter Web Full Stack Developer - Growdev.
+Este trabalho foi desenvolvido para a conclusão do módulo Back-end II do Programa Starter Full Stack Web Developer - Growdev.
 
 # Detalhamento das funcionalidades/features
 
