@@ -38,15 +38,19 @@ FollowController_1.default.registerFollow(user1, user4);
 const like1 = new Like_1.Like(user1, tweet2);
 const like2 = new Like_1.Like(user1, tweet3);
 const like3 = new Like_1.Like(user1, tweet4);
+const like4 = new Like_1.Like(user2, tweet2);
 LikeController_1.default.registerLike(like1);
 LikeController_1.default.registerLike(like2);
 LikeController_1.default.registerLike(like3);
+LikeController_1.default.registerLike(like4);
 // Registro de replies
 const reply1 = new Tweet_1.Tweet("Resposta ao tweet da angeli.", "reply");
 const reply2 = new Tweet_1.Tweet("Resposta ao tweet do tio do codaí.", "reply");
 const reply3 = new Tweet_1.Tweet("Resposta ao tweet do tech helper.", "reply");
+const reply4 = new Tweet_1.Tweet("Resposta ao tweet do tio do codaí de novo.", "reply");
 ReplyController_1.default.registerReply(user1, reply1, tweet2);
 ReplyController_1.default.registerReply(user1, reply2, tweet3);
 ReplyController_1.default.registerReply(user1, reply3, tweet4);
+ReplyController_1.default.registerReply(user1, reply4, tweet3);
 // Carregamento do feed
 FeedController_1.default.loadFeed(user1);
