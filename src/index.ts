@@ -40,19 +40,23 @@ FollowController.registerFollow(user1, user4);
 const like1 = new Like(user1, tweet2);
 const like2 = new Like(user1, tweet3);
 const like3 = new Like(user1, tweet4);
+const like4 = new Like(user2, tweet2);
 
 LikeController.registerLike(like1);
 LikeController.registerLike(like2);
 LikeController.registerLike(like3);
+LikeController.registerLike(like4);
 
 // Registro de replies
 const reply1 = new Tweet("Resposta ao tweet da angeli.", "reply");
 const reply2 = new Tweet("Resposta ao tweet do tio do codaí.", "reply");
 const reply3 = new Tweet("Resposta ao tweet do tech helper.", "reply");
+const reply4 = new Tweet("Resposta ao tweet do tio do codaí de novo.", "reply");
 
 ReplyController.registerReply(user1, reply1, tweet2);
 ReplyController.registerReply(user1, reply2, tweet3);
 ReplyController.registerReply(user1, reply3, tweet4);
+ReplyController.registerReply(user1, reply4, tweet3);
 
 // Carregamento do feed
 

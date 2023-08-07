@@ -9,7 +9,7 @@ class TweetController {
     public listTweet(tweet: Tweet) {
         const username: string = tweet.getInf().username;
         const content: string = tweet.getInf().content;
-        const likes: number = tweet.getInf().likes.length;
+        let likes: number = (tweet.getInf().likes.length);
         const like: string = tweet.getInf().likes[0];
 
         const totalReplies: number = tweet.getInf().replies.length;
@@ -38,6 +38,7 @@ class TweetController {
             }); console.log("---------------------------------------------");
 
         } else if (likes >= 2) {
+            likes -= 1;
             console.log("@" + username + ": " + content);
             console.log("@" + like + " and other " + likes + " users liked this.");
 

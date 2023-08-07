@@ -8,7 +8,7 @@ class TweetController {
     listTweet(tweet) {
         const username = tweet.getInf().username;
         const content = tweet.getInf().content;
-        const likes = tweet.getInf().likes.length;
+        let likes = (tweet.getInf().likes.length);
         const like = tweet.getInf().likes[0];
         const totalReplies = tweet.getInf().replies.length;
         const replies = tweet.getInf().replies;
@@ -37,6 +37,7 @@ class TweetController {
             console.log("---------------------------------------------");
         }
         else if (likes >= 2) {
+            likes -= 1;
             console.log("@" + username + ": " + content);
             console.log("@" + like + " and other " + likes + " users liked this.");
             if (totalReplies === 0) {
