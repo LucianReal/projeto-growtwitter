@@ -3,6 +3,6 @@ function validateFieldsUser(data: any): boolean {
         return false;
     }
     return true;
-}
+};
 
 export default validateFieldsUser;

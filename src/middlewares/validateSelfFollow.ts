@@ -3,6 +3,6 @@ function validateSelfFollow(data1: any, data2: any): boolean {
         return false;
     }
     return true;
-}
+};
 
 export default validateSelfFollow;

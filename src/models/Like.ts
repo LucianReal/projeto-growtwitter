@@ -11,7 +11,7 @@ export class Like {
         this.id = uuid();
         this.username = user.getInf().username;
         this.tweet = tweet;
-    }
+    };
 
     public getInf() {
         return {
@@ -19,5 +19,5 @@ export class Like {
             username: this.username,
             tweet: this.tweet,
         };
-    }
-}
+    };
+};

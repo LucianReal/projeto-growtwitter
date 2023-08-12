@@ -9,8 +9,8 @@ class TweetController {
     public listTweet(tweet: Tweet) {
         const username: string = tweet.getInf().username;
         const content: string = tweet.getInf().content;
-        let likes: number = (tweet.getInf().likes.length);
         const like: string = tweet.getInf().likes[0];
+        let likes: number = (tweet.getInf().likes.length);
 
         const totalReplies: number = tweet.getInf().replies.length;
         const replies: Tweet[] = tweet.getInf().replies;

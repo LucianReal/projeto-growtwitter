@@ -12,14 +12,10 @@ class UserController {
         if (validatedUsername && validatedFields) {
             users.push(user);
         } else if (!validatedUsername) {
-            console.log("Usuário já existente.")
+            console.log("Usuário já existente.");
         } else if (!validatedFields) {
-            console.log("Preencha todos os campos.")
+            console.log("Preencha todos os campos.");
         }
-    };
-
-    public listUsers() {
-        console.log(users);
     };
 };
 

@@ -17,7 +17,7 @@ export class User {
         this.username = username;
         this.email = email;
         this.password = password;
-    }
+    };
 
     public getInf() {
         return {
@@ -28,12 +28,12 @@ export class User {
             username: this.username,
             password: this.password
         };
-    }
+    };
 
     public sendTweet(tweet: Tweet): void {
         tweet.setUsername(this.getInf().username);
         tweets.push(tweet);
-    }
+    };
 
     public follow(user: User) {
         this.following.push(user.username);
@@ -50,4 +50,4 @@ export class User {
     public showTweets() {
 
     };
-}
+};

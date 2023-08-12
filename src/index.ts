@@ -9,6 +9,7 @@ import { Tweet } from "./models/Tweet";
 import { User } from "./models/User";
 
 // Registro de usuários
+
 const user1 = new User("Luciano", "lucian", "luciano@gmail.com", "luciano123");
 const user2 = new User("Angel", "angeli", "angel@gmail.com", "angel123");
 const user3 = new User("Marcelo", "tio do codaí", "codaí@gmail.com", "codaí");
@@ -20,6 +21,7 @@ UserController.registerUser(user3);
 UserController.registerUser(user4);
 
 // Registro de tweets
+
 const tweet1 = new Tweet("Primeiro tweet.", "normal");
 const tweet2 = new Tweet("Segundo tweet.", "normal");
 const tweet3 = new Tweet("Terceiro tweet.", "normal");
@@ -31,6 +33,7 @@ TweetController.registerTweet(user3, tweet3);
 TweetController.registerTweet(user4, tweet4);
 
 // Registro de follows
+
 FollowController.registerFollow(user1, user2);
 FollowController.registerFollow(user1, user3);
 FollowController.registerFollow(user1, user4);
@@ -48,6 +51,7 @@ LikeController.registerLike(like3);
 LikeController.registerLike(like4);
 
 // Registro de replies
+
 const reply1 = new Tweet("Resposta ao tweet da angeli.", "reply");
 const reply2 = new Tweet("Resposta ao tweet do tio do codaí.", "reply");
 const reply3 = new Tweet("Resposta ao tweet do tech helper.", "reply");

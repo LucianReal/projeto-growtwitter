@@ -8,6 +8,6 @@ function validateUsernameUser(data: any): boolean {
         return false;
     }
     return true;
-}
+};
 
 export default validateUsernameUser;

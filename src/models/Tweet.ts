@@ -15,7 +15,7 @@ export class Tweet {
         this.replies = [];
         this.content = content;
         this.type = type;
-    }
+    };
 
     public getInf() {
         return {
@@ -26,11 +26,11 @@ export class Tweet {
             content: this.content,
             type: this.type
         };
-    }
+    };
 
     public setUsername(username: string): void {
         this.username = username;
-    }
+    };
 
     public reply(reply: Tweet) {
         this.replies.push(reply);
@@ -47,4 +47,4 @@ export class Tweet {
     public showReplies() {
         return this.replies;
     };
-}
+};
